@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Profile</title>
+    <style>
+        * {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for the submit/register button */
+.addbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.addbtn:hover {
+  opacity:1;
+}
+</style>
+</head>
+<body>
+<body>
+<form action="/restaurantDetails" method="post">
+    <div class="login-block">
+        <h1>Update Details</h1>
+        <label><b>UserName</b></label><br>
+        <input type="text" placeholder="Enter Username" name="userName" th:value="${customer.userName}" readonly/>
+        <label><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" th:value="${customer.name}"><br><br>
+        <label><b>Password</b></label><br>
+        <input type="password" placeholder="Enter Password" name="password" th:value="${customer.password}" />
+<!--        <label><b>Email</b></label><br>-->
+<!--        <input type="email" placeholder="Email" name="email" th:value="${customer.email}" readonly/>-->
+        <label><b>Mobile Number</b></label><br>
+        <input type="number" placeholder="Enter Mobile Number" name="phoneNumber" th:value="${customer.phoneNumber}"/>
+        <label><b>Address</b></label><br>
+        <input type="text" placeholder="Enter Address" name="address" th:value="${customer.address}">
+        <button>Update</button>
+        <button type="button" class="cancelButton" onclick="/">Cancel</button><br/><br/>
+    </div>
+</form>
+</body>
+</body>
+</html>
